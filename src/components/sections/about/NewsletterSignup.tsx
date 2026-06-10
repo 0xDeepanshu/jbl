@@ -1,16 +1,18 @@
 import Image from "next/image";
-import Container from "@/components/ui/Container";
+
 import SignupCard from "@/components/ui/SignupCard";
 
 interface NewsletterSignupProps {
   bgImage?: string;
+  compact?: boolean;
 }
 
 export default function NewsletterSignup({
   bgImage,
+  compact,
 }: NewsletterSignupProps = {}) {
   return (
-    <section className="relative bg-[#ff5a1f] overflow-hidden">
+    <section className={`relative bg-[#ff5a1f] overflow-hidden ${compact ? "py-20" : "h-screen pb-6"}`}>
       {bgImage && (
         <div className="absolute inset-0 pointer-events-none select-none">
           <Image
@@ -36,10 +38,10 @@ export default function NewsletterSignup({
         }}
       />
 
-      <Container>
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 py-20 md:py-24 lg:py-28 items-center">
+      <div className={`mx-auto max-w-[1440px] px-4 ${compact ? "" : "h-full"}`}>
+        <div className={`relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 ${compact ? "items-center" : "h-full items-end"}`}>
           {/* Left side */}
-          <div className="flex flex-col">
+          <div className="flex flex-col pb-16">
             <h2 className="font-oswald uppercase text-white font-bold text-[36px] sm:text-[42px] md:text-[50px] lg:text-[56px] leading-[1.1] tracking-tight">
               SIGN UP FOR THE LATEST
               <br />
@@ -55,11 +57,12 @@ export default function NewsletterSignup({
           </div>
 
           {/* Right side */}
-          <div className="flex justify-center lg:justify-end">
+          <div className="flex justify-center lg:justify-end self-end">
             <SignupCard />
           </div>
         </div>
-      </Container>
+      </div>
+
     </section>
   );
 }

@@ -16,22 +16,30 @@ export default function TodaysOffer() {
 
   return (
     <section className="relative overflow-hidden bg-[#0a0a0a] py-20">
-      {/* Abstract background shapes */}
-      <div className="absolute top-10 left-0 w-72 h-72 rounded-full bg-[#FF5A00]/5 blur-3xl" />
-      <div className="absolute bottom-10 right-0 w-96 h-96 rounded-full bg-[#791B43]/10 blur-3xl" />
+
+
+      <Image
+        src="/bg/todaysoffer_bg.png"
+        alt=""
+        fill
+        priority
+        className="object-cover"
+      />
 
       <Container>
+
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
           {/* Left */}
           <div className="flex flex-col items-center">
             <div className="relative flex items-center justify-center w-full max-w-[420px] aspect-square">
               <div className="absolute inset-6 rounded-3xl bg-[#E84B07]" />
               <Image
-                src="/headphone/todays-offer/product-main.png"
+                src="/Todaysoffer/men.png"
                 alt="JBL Tune 770NC"
-                width={340}
-                height={340}
-                className="object-contain relative z-10"
+                width={540}
+                height={540}
+                className="object-cover absolute  z-10 w-[400px] h-[480px] -top-20 "
                 priority
               />
             </div>
@@ -42,11 +50,10 @@ export default function TodaysOffer() {
                   key={src}
                   type="button"
                   onClick={() => setActiveThumb(i)}
-                  className={`relative rounded-xl overflow-hidden transition-all duration-200 ${
-                    i === activeThumb
-                      ? "ring-2 ring-[#FF5A00] ring-offset-2 ring-offset-[#0a0a0a] scale-110"
-                      : "opacity-50 hover:opacity-80"
-                  }`}
+                  className={`relative rounded-xl overflow-hidden transition-all duration-200 ${i === activeThumb
+                    ? "ring-2 ring-[#FF5A00] ring-offset-2 ring-offset-[#0a0a0a] scale-110"
+                    : "opacity-50 hover:opacity-80"
+                    }`}
                 >
                   <Image src={src} alt="" width={64} height={64} className="object-cover" />
                 </button>
@@ -56,45 +63,64 @@ export default function TodaysOffer() {
 
           {/* Right */}
           <div className="flex flex-col gap-6 relative">
-            <span className="absolute top-0 right-0 font-oswald text-sm uppercase tracking-wider text-[#FF5A00] rotate-6 origin-top-right">
-              today&apos;s best feature
-            </span>
+            <div className="absolute top-0 right-10 font-oswald text-sm  rotate-30 origin-top-right">
+              <Image
+                src="/todaysoffer/text.png"
+                alt=""
+                width={200}
+                height={200}
+                className="object-cover"
+              />
+            </div>
 
-            <span className="inline-flex self-start items-center px-4 py-1 rounded-full bg-[#FF5A00] text-white text-xs font-bold uppercase tracking-wider">
+            <span className="">
               Save 20%
             </span>
 
             <div>
-              <h2 className="font-oswald text-5xl font-bold uppercase text-white leading-tight">
+              <h2 className="font-oswald text-5xl font-medium uppercase  leading-tight text-[#E84B07]">
                 Today&apos;s Offer
               </h2>
-              <p className="mt-2 font-oswald text-2xl text-white/80">
+              <p className="mt-2 font-oswald text-2xl text-white">
                 JBL Tune 770NC - ₹5,999.00
               </p>
             </div>
 
             <p className="text-sm leading-relaxed text-white/60 max-w-md">
-              Experience premium noise cancelling with JBL&apos;s latest
-              wireless over-ear headphones. Featuring adaptive ANC, 40-hour
-              battery life, and ultra-comfortable memory foam ear cushions for
-              all-day listening.
+              Lorem ipsum dolor sit amet consectetur. Sagittis ornare dictum felis mattis cursus. Dui sed mauris lectus dui odio. Luctus ullamcorper a nunc est arcu enim aenean nullam mattis. Bibendum sagittis adipiscing
             </p>
 
-            <div className="flex flex-wrap gap-4">
-              <Button radius={28} className="px-8 py-3 text-sm tracking-widest">
-                ORDER NOW
+            <div className="flex flex-wrap gap-8 font-light">
+              <Button variant="pink" className="px-10 py-3 text-2xl">
+                Order Now
               </Button>
-              <Button
-                variant="pink"
-                radius={28}
-                className="px-8 py-3 text-sm tracking-widest"
-              >
-                YOUR CUSTOMIZATION
+              <Button variant="orange" className="px-5 py-2 text-2xl">
+                Your Customization
               </Button>
             </div>
           </div>
         </div>
       </Container>
+      <div className="absolute bottom-0 left-0 w-full leading-none z-20">
+        <svg
+          viewBox="0 0 1440 140"
+          preserveAspectRatio="none"
+          className="w-full h-[140px]"
+        >
+          <path
+            d="
+        M0,40
+        C250,90 550,110 900,70
+        C1150,40 1300,20 1440,40
+        L1440,140
+        L0,140
+        Z
+        "
+            fill="#ff5a00"
+          />
+        </svg>
+      </div>
     </section>
+
   );
 }

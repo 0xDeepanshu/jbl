@@ -15,22 +15,29 @@ export default function FeatureCard({
   ctaText,
 }: FeatureCardProps) {
   return (
-    <div className="flex flex-col items-center gap-2 rounded-2xl border border-white/20 bg-black p-5 text-center shadow-xl shadow-black/40 transition-all duration-300 hover:border-white/40">
-      <div className="relative w-32 h-32">
-        <Image src={image} alt={title} fill className="object-contain" />
+    <div className="flex flex-col items-start border-10 gap-[6px]  border border-white bg-black h-[350px] w-[250px] text-start shadow-xl shadow-black/40 transition-all duration-300 hover:border-white">
+      <div className="flex flex-col rounded-2xl bg-black p-4 shadow-xl">
+        <div className="relative h-[140px] w-full overflow-hidden rounded-lg">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover"
+          />
+        </div>
+
+        <h3 className="mt-4 font-oswald text-xl font-bold text-white">
+          {title}
+        </h3>
+
+        <p className="mt-2 text-sm text-white/60">
+          {description}
+        </p>
+
+        <button className="mt-auto text-start pt-4 text-xs font-semibold text-orange-500">
+          {ctaText}
+        </button>
       </div>
-
-      <h3 className="font-oswald text-2xl font-bold uppercase text-white">
-        {title}
-      </h3>
-
-      <p className="max-w-xs text-sm leading-relaxed text-white/60">
-        {description}
-      </p>
-
-      <Button radius={28} className="px-6 py-2 text-sm tracking-widest">
-        {ctaText}
-      </Button>
-    </div>
+    </div >
   );
 }

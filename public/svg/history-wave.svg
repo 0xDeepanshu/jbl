@@ -1,0 +1,19 @@
+<div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
+  <svg
+    viewBox="0 0 1440 140"
+    preserveAspectRatio="none"
+    className="w-full h-[140px]"
+  >
+    <path
+      d="
+      M0,40
+      C250,90 550,110 900,70
+      C1150,40 1300,20 1440,40
+      L1440,140
+      L0,140
+      Z
+      "
+      fill="#ff5a00"
+    />
+  </svg>
+</div>

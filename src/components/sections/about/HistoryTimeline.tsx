@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 
 export interface HistoryItem {
   year: string;
@@ -29,72 +30,58 @@ export default function HistoryTimeline({ items }: HistoryTimelineProps) {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto mt-12 lg:mt-16">
-      {/* Navigation + Year */}
-      <div className="flex items-center justify-center gap-6 lg:gap-10">
-        <button
-          onClick={goToPrev}
-          disabled={isFirst}
-          className="flex items-center justify-center w-10 h-10 lg:w-12 lg:h-12 rounded-full border border-white/20 text-white hover:bg-white/10 transition-all duration-300 disabled:opacity-20 disabled:cursor-not-allowed disabled:hover:bg-transparent"
-          aria-label="Previous"
-        >
-          <ChevronLeft size={20} />
-        </button>
-
-        <span className="font-oswald text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-none select-none">
-          {current.year}
-        </span>
-
-        <button
-          onClick={goToNext}
-          disabled={isLast}
-          className="flex items-center justify-center w-10 h-10 lg:w-12 lg:h-12 rounded-full border border-white/20 text-white hover:bg-white/10 transition-all duration-300 disabled:opacity-20 disabled:cursor-not-allowed disabled:hover:bg-transparent"
-          aria-label="Next"
-        >
-          <ChevronRight size={20} />
-        </button>
-      </div>
-
-      {/* Year indicators */}
-      <div className="flex items-center justify-center gap-2 mt-4">
-        {items.map((item, index) => (
-          <button
-            key={item.year}
-            onClick={() => setActiveIndex(index)}
-            className={`h-1.5 rounded-full transition-all duration-300 ${
-              index === activeIndex
-                ? "w-8 bg-white"
-                : "w-2 bg-white/30 hover:bg-white/50"
-            }`}
-            aria-label={`Go to ${item.year}`}
-          />
-        ))}
-      </div>
-
-      {/* Content area */}
-      <div className="mt-10 lg:mt-14 text-center">
-        <h3 className="font-oswald text-2xl md:text-3xl lg:text-4xl font-semibold text-white uppercase tracking-wide">
-          {current.title}
-        </h3>
-        <p className="mt-4 text-white/80 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-          {current.description}
-        </p>
-      </div>
-
-      {/* Image gallery */}
-      <div className="mt-10 lg:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
-        {current.images.slice(0, 3).map((img, i) => (
-          <div
-            key={i}
-            className="relative aspect-[4/3] rounded-xl overflow-hidden bg-gradient-to-br from-white/10 to-white/5"
-          >
-            <div
-              className="w-full h-full bg-cover bg-center"
-              style={{ backgroundImage: `url(${img})` }}
+    <div className="flex flex-col items-center gap-4">
+      {/* Feature images */}
+      <div className="flex justify-center gap-6">
+        {current.images.slice(0, 2).map((img) => (
+          <div key={img} className="w-[330px] h-[200px] overflow-hidden">
+            <Image
+              src={img}
+              alt=""
+              width={330}
+              height={200}
+              className="object-cover w-full h-full"
             />
           </div>
         ))}
       </div>
+
+      {/* Year + navigation */}
+      <div className="flex items-center justify-center gap-6 mt-8">
+        <button
+          type="button"
+          onClick={goToPrev}
+          disabled={isFirst}
+          className="text-white/80 hover:text-white transition-colors disabled:opacity-20 disabled:cursor-not-allowed"
+          aria-label="Previous"
+        >
+          <ChevronLeft size={24} strokeWidth={1.5} />
+        </button>
+        <span className="font-oswald text-3xl font-medium text-white select-none">
+          {current.year}
+        </span>
+        <button
+          type="button"
+          onClick={goToNext}
+          disabled={isLast}
+          className="text-white/80 hover:text-white transition-colors disabled:opacity-20 disabled:cursor-not-allowed"
+          aria-label="Next"
+        >
+          <ChevronRight size={24} strokeWidth={1.5} />
+        </button>
+      </div>
+
+      {/* Subtitle */}
+      <h3 className="font-oswald text-3xl font-light text-white uppercase tracking-wide mt-3">
+        {current.title}
+      </h3>
+
+      {/* Description */}
+      <p className="text-white/70 text-sm leading-relaxed text-center max-w-[600px] mt-4">
+        {current.description}
+      </p>
+
+
     </div>
   );
 }

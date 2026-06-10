@@ -17,7 +17,7 @@ export default function AboutPage() {
             />
             <OurHistory />
             <WhatWeOffer />
-            <NewsletterSignup />
+            <NewsletterSignup compact />
         </main>
     );
 }

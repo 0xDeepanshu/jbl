@@ -5,7 +5,7 @@ import Image from "next/image";
 import Container from "@/components/ui/Container";
 import CategoryTabs from "@/components/ui/CategoryTabs";
 import WaveDivider from "@/components/ui/WaveDivider";
-
+import Button from "@/components/ui/Button";
 const tabs = [
   { label: "Bluetooth", value: "bluetooth" },
   { label: "Headphones", value: "headphones" },
@@ -24,7 +24,7 @@ const tabContent: Record<
     heading: "BLUETOOTH SPEAKER",
     description:
       "Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet",
-    image: "/bg/bg_audio.png",
+    image: "/offer/off.png",
   },
   headphones: {
     heading: "HEADPHONES",
@@ -70,18 +70,11 @@ export default function WhatWeOffer() {
 
   return (
     <section className="relative bg-[#0d0d0d] overflow-hidden">
-      <div
-        className="absolute inset-0 opacity-[0.025] pointer-events-none"
-        style={{
-          backgroundImage: `
-            radial-gradient(circle at 20% 25%, rgba(255,255,255,0.025) 0%, transparent 50%),
-            radial-gradient(circle at 80% 15%, rgba(255,255,255,0.02) 0%, transparent 50%),
-            radial-gradient(circle at 35% 75%, rgba(255,255,255,0.015) 0%, transparent 50%),
-            radial-gradient(circle at 65% 60%, rgba(255,255,255,0.02) 0%, transparent 50%),
-            radial-gradient(circle at 10% 85%, rgba(255,255,255,0.015) 0%, transparent 50%),
-            radial-gradient(circle at 90% 45%, rgba(255,255,255,0.02) 0%, transparent 50%)
-          `,
-        }}
+      <Image
+        src="/bg/rectangle_bg_mostpopular.png"
+        alt=""
+        fill
+        className="object-cover"
       />
 
       <Container>
@@ -114,9 +107,9 @@ export default function WhatWeOffer() {
               <p className="mt-4 text-[#d0d0d0] text-sm md:text-base leading-relaxed max-w-md">
                 {current.description}
               </p>
-              <button className="mt-6 md:mt-8 self-start px-6 py-3 rounded-full bg-gradient-to-r from-[#ff5a1f] to-[#e04e18] text-white text-xs font-semibold uppercase tracking-widest hover:shadow-lg hover:shadow-[#ff5a1f]/30 hover:scale-105 transition-all duration-300">
+              <Button variant="pink" className="mt-6 md:mt-8 self-start px-6 py-3 rounded-full  text-white text-xs font-semibold uppercase tracking-widest hover:shadow-lg hover:shadow-[#ff5a1f]/30 hover:scale-105 transition-all duration-300">
                 LEARN MORE
-              </button>
+              </Button>
             </div>
 
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden bg-white/5">
@@ -130,8 +123,26 @@ export default function WhatWeOffer() {
           </div>
         </div>
       </Container>
+      <div className="absolute bottom-0 left-0 w-full leading-none">
+        <svg
+          viewBox="0 0 1440 140"
+          preserveAspectRatio="none"
+          className="w-full h-[140px]"
+        >
+          <path
+            d="
+        M0,40
+        C250,90 550,110 900,70
+        C1150,40 1300,20 1440,40
+        L1440,140
+        L0,140
+        Z
+        "
+            fill="#ff5a00"
+          />
+        </svg>
+      </div>
 
-      <WaveDivider fill="#ff5a1f" />
     </section>
   );
 }

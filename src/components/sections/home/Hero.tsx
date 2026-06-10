@@ -3,10 +3,10 @@ import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 
 const thumbnails = [
-  "/hero-thumb-1.png",
-  "/hero-thumb-2.png",
-  "/hero-thumb-3.png",
-  "/hero-thumb-4.png",
+  "/headphone/hero/1.jpg",
+  "/headphone/hero/2.jpg",
+  "/headphone/hero/3.jpg",
+  "/headphone/hero/4.jpg",
 ];
 
 export default function Hero() {
@@ -47,14 +47,17 @@ export default function Hero() {
 
             <div className="absolute right-[-100px] top-1/2 -translate-y-1/2 flex flex-col gap-6">
               {thumbnails.map((src, i) => (
-                <Image
+                <div
                   key={i}
-                  src={src}
-                  alt=""
-                  width={80}
-                  height={80}
-                  className="rounded-lg border border-white/20 object-cover transition-all duration-300 hover:border-white hover:scale-110"
-                />
+                  className="relative w-[72px] h-[72px] rounded-lg overflow-hidden border border-white/20 hover:border-white hover:scale-110 transition-all duration-300 shrink-0"
+                >
+                  <Image
+                    src={src}
+                    alt=""
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               ))}
             </div>
           </div>
