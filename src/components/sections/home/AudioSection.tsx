@@ -59,7 +59,7 @@ export default function AudioSection() {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-[4fr_6fr] gap-12 items-start">
             <div className="flex flex-col items-center lg:items-start pt-16 lg:pt-72">
-              <h2 className="font-oswald text-5xl lg:text-6xl font-bold uppercase text-white leading-tight text-center lg:text-left">
+              <h2 className="font-oswald text-3xl lg:text-6xl font-light uppercase text-white leading-tight text-center lg:text-left">
                 OUR AUDIO DOES IT ALL
               </h2>
               <p className="text-sm leading-relaxed text-white/70 max-w-[350px] text-center lg:text-left mt-6">
