@@ -9,10 +9,11 @@ import MostPopular from "@/components/sections/home/MostPopular";
 import NewArrivals from "@/components/sections/home/NewArrivals";
 import NoiseCancelling from "@/components/sections/home/NoiseCancelling";
 import TodaysOffer from "@/components/sections/home/TodaysOffer";
+import Navbar from "@/components/layout/navbar";
 export default function Home() {
   return (
     <div className="">
-      {/* <Navbar /> */}
+
       <Hero />
       <MostPopular />
       <AudioSection />

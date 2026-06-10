@@ -13,13 +13,13 @@ const navItems = [
     { label: "HOME", href: "/" },
     { label: "PRODUCT", href: "/products" },
     { label: "BLOG", href: "/blog" },
-    { label: "ABOUT US", href: "/about" },
+    { label: "ABOUT US", href: "/aboutus" },
     { label: "CONTACT US", href: "/contact" },
 ];
 
 export default function Navbar() {
     return (
-        <header className="z-10 fixed font-oswald w-full flex justify-center pt-6 ">
+        <header className="z-50 fixed font-oswald w-full flex justify-center pt-6 ">
             <nav
                 className="flex items-center justify-between w-full max-w-5xl h-[55px] px-5 rounded-[19px]"
                 style={{

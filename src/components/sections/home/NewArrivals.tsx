@@ -201,7 +201,7 @@ export default function NewArrivals() {
                   type="button"
                   onClick={() => setActiveThumb(i)}
                   className={`border-2  relative rounded-xl overflow-hidden transition-all duration-200 ${i === activeThumb
-                    ? "ring-2 ring-[#FF5A00] ring-offset-2 ring-offset-[#0a0a0a] scale-110"
+                    ? " scale-110"
                     : "opacity-50 hover:opacity-80 hover:scale-105"
                     }`}
                 >

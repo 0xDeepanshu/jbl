@@ -30,58 +30,61 @@ export default function HistoryTimeline({ items }: HistoryTimelineProps) {
   };
 
   return (
-    <div className="flex flex-col items-center gap-4">
-      {/* Feature images */}
-      <div className="flex justify-center gap-6">
-        {current.images.slice(0, 2).map((img) => (
-          <div key={img} className="w-[330px] h-[200px] overflow-hidden">
+    <div className="flex flex-col items-center">
+      {/* Feature images — two tilted cards */}
+      <div className="flex justify-center items-center gap-8 mt-10">
+        {current.images.slice(0, 2).map((img, i) => (
+          <div
+            key={img}
+            className="relative w-[280px] md:w-[320px] h-[190px] md:h-[210px] overflow-hidden rounded-md shadow-2xl"
+            style={{
+              transform: i === 0 ? "rotate(-3deg)" : "rotate(3deg)",
+            }}
+          >
             <Image
               src={img}
               alt=""
-              width={330}
-              height={200}
-              className="object-cover w-full h-full"
+              fill
+              className="object-cover"
             />
           </div>
         ))}
       </div>
 
       {/* Year + navigation */}
-      <div className="flex items-center justify-center gap-6 mt-8">
+      <div className="flex items-center justify-center gap-8 mt-10">
         <button
           type="button"
           onClick={goToPrev}
           disabled={isFirst}
-          className="text-white/80 hover:text-white transition-colors disabled:opacity-20 disabled:cursor-not-allowed"
+          className="text-white hover:text-white/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           aria-label="Previous"
         >
-          <ChevronLeft size={24} strokeWidth={1.5} />
+          <ChevronLeft size={28} strokeWidth={1.5} />
         </button>
-        <span className="font-oswald text-3xl font-medium text-white select-none">
+        <span className="font-oswald text-[28px] font-semibold text-white select-none tracking-wide">
           {current.year}
         </span>
         <button
           type="button"
           onClick={goToNext}
           disabled={isLast}
-          className="text-white/80 hover:text-white transition-colors disabled:opacity-20 disabled:cursor-not-allowed"
+          className="text-white hover:text-white/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           aria-label="Next"
         >
-          <ChevronRight size={24} strokeWidth={1.5} />
+          <ChevronRight size={28} strokeWidth={1.5} />
         </button>
       </div>
 
-      {/* Subtitle */}
-      <h3 className="font-oswald text-3xl font-light text-white uppercase tracking-wide mt-3">
+      {/* Title */}
+      <h3 className="font-oswald text-[22px] md:text-[26px] font-bold text-white uppercase tracking-wider mt-4 text-center">
         {current.title}
       </h3>
 
       {/* Description */}
-      <p className="text-white/70 text-sm leading-relaxed text-center max-w-[600px] mt-4">
+      <p className="text-white/80 text-[13px] md:text-[14px] leading-relaxed text-center max-w-[560px] mt-4 italic">
         {current.description}
       </p>
-
-
     </div>
   );
 }

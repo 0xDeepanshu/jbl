@@ -9,18 +9,14 @@ interface OurHistoryProps {
 }
 
 const historyItems: HistoryItem[] = [
-
-
-
   {
     year: "2024",
     title: "in tune with the enviourment",
     description:
-      "Introducing the JBL Clip 4 and Go 3 in an eco-friendly material made from 90% post-consumer recycled plastic. It’s part of our ongoing plan to redesign our products and packaging as we move towards becoming carbon neutral.",
+      "Introducing The JBL Clip 4 And Go 3 In An Eco-Friendly Material Made From 90% Post-Consumer Recycled Plastic. It's Part Of Our Ongoing Plan To Redesign Our Products And Packaging As We Move Towards Becoming Carbon Neutral.",
     images: [
-      "/bg/rectangle_bg_mostpopular.png",
-      "/bg/bg_audio copy.png",
-      "/bg/bg_audio.png",
+      "/history/1.jpg",
+      "/history/2.png",
     ],
   },
 ];
@@ -108,54 +104,34 @@ export default function OurHistory({
       </section>
 
 
-      {/* PART 2 — PREMIUM TIMELINE                      */}
+      {/* PART 2 — OUR HISTORY TIMELINE */}
 
-      <section className="relative overflow-hidden py-[120px]">
+      <section className="relative overflow-hidden py-[100px]">
+        {/* Orange background */}
+        <div className="absolute inset-0 bg-[#ff5a00]" />
+
+        {/* Texture overlay from the bg image */}
         <div className="absolute inset-0 pointer-events-none select-none">
           <Image
-            src="/bg/bg_audio copy.png"
+            src="/bg/rectangle_bg_mostpopular.png"
             alt=""
             fill
-            className="object-cover"
+            className="object-cover opacity-30 mix-blend-multiply"
           />
-          <div className="absolute inset-0 " />
         </div>
-
-        {timelineBgImage && (
-          <div className="absolute inset-0 pointer-events-none select-none">
-            <Image src={timelineBgImage} alt="" fill className="object-cover" />
-            <div className="absolute inset-0 bg-black/70" />
-          </div>
-        )}
-
-        <div
-          className="absolute inset-0 opacity-[0.03] pointer-events-none"
-          style={{
-            backgroundImage: `
-              radial-gradient(circle at 25% 40%, rgba(255,255,255,0.04) 0%, transparent 50%),
-              radial-gradient(circle at 75% 30%, rgba(255,255,255,0.03) 0%, transparent 50%),
-              radial-gradient(circle at 50% 80%, rgba(255,255,255,0.02) 0%, transparent 50%),
-              radial-gradient(circle at 15% 70%, rgba(255,255,255,0.03) 0%, transparent 50%),
-              radial-gradient(circle at 85% 85%, rgba(255,255,255,0.02) 0%, transparent 50%)
-            `,
-          }}
-        />
-
-
 
         <Container>
           <div className="relative z-10">
             <div className="text-center">
-              <span className="font-oswald text-white text-[62px] tracking-[4px] uppercase">
+              <h2 className="font-oswald text-white font-bold text-[42px] sm:text-[52px] lg:text-[62px] leading-none uppercase tracking-[2px]">
                 OUR HISTORY
-              </span>
-              <h2 className="font-oswald text-white font-light text-[40px] sm:text-[56px] lg:text-[52px] leading-none mt-3">
-                75 YEARS OF JBL SOUND
               </h2>
-
+              <p className="font-oswald text-white font-light text-[24px] sm:text-[30px] lg:text-[36px] leading-none mt-3 uppercase tracking-[1px]">
+                75 YEARS OF JBL SOUND
+              </p>
             </div>
 
-            <div className="mt-16">
+            <div className="mt-8">
               <HistoryTimeline items={historyItems} />
             </div>
           </div>
