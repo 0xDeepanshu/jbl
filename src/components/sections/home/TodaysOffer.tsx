@@ -6,9 +6,9 @@ import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 
 const thumbnails = [
-  "/headphone/todays-offer/thumb-1.png",
-  "/headphone/todays-offer/thumb-2.png",
-  "/headphone/todays-offer/thumb-3.png",
+  "/headphone/todaysoffer/1.png",
+  "/headphone/todaysoffer/2.png",
+  "/headphone/todaysoffer/3.png",
 ];
 
 export default function TodaysOffer() {
@@ -51,8 +51,8 @@ export default function TodaysOffer() {
                   key={src}
                   type="button"
                   onClick={() => setActiveThumb(i)}
-                  className={`relative rounded-xl overflow-hidden transition-all duration-200 ${i === activeThumb
-                    ? "ring-2 ring-[#FF5A00] ring-offset-2 ring-offset-[#0a0a0a] scale-110"
+                  className={`relative border-1 rounded-xl overflow-hidden transition-all duration-200 ${i === activeThumb
+                    ? "scale-110"
                     : "opacity-50 hover:opacity-80"
                     }`}
                 >

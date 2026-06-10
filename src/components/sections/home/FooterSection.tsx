@@ -6,8 +6,8 @@ const countries = [
     name: "New York",
     flag: "/countries/newyork.png",
     address: "3848 Bay Court",
-    imgW: 100,
-    imgH: 100,
+    imgW: 50,
+    imgH: 50,
   },
   {
     name: "Paris",

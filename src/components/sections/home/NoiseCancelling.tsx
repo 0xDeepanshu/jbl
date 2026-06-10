@@ -94,8 +94,8 @@ export default function NoiseCancelling() {
                     className="absolute w-32 h-32 rounded-full"
                     style={{
                       backgroundColor: isFeatured
-                        ? "rgba(255,255,255,0.2)"
-                        : "rgba(232,75,7,0.15)",
+                        ? "#FF4612"
+                        : "#FF4612",
                       transform: "translate(6px, -4px)",
                     }}
                   />
