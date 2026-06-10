@@ -2,7 +2,7 @@ import PageBanner from "@/components/ui/PageBanner";
 import OurHistory from "@/components/sections/about/OurHistory";
 import WhatWeOffer from "@/components/sections/about/WhatWeOffer";
 import NewsletterSignup from "@/components/sections/about/NewsletterSignup";
-
+import FooterSection from "@/components/sections/home/FooterSection";
 export default function AboutPage() {
     return (
         <main>
@@ -18,6 +18,7 @@ export default function AboutPage() {
             <OurHistory />
             <WhatWeOffer />
             <NewsletterSignup compact />
+            <FooterSection />
         </main>
     );
 }

@@ -4,7 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import Container from "@/components/ui/Container";
 import CategoryTabs from "@/components/ui/CategoryTabs";
-import WaveDivider from "@/components/ui/WaveDivider";
 import Button from "@/components/ui/Button";
 const tabs = [
   { label: "Bluetooth", value: "bluetooth" },
