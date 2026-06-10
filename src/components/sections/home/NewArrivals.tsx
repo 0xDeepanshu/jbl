@@ -156,7 +156,7 @@ export default function NewArrivals() {
                 }}
               />
               <Image
-                src={thumbnails[activeThumb]}
+                src="/arrivals/detailed/detailed_speaker.png"
                 alt="JBL BOOMBOX 3 WI-FI"
                 width={700}
                 height={700}
