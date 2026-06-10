@@ -35,13 +35,14 @@ export default function OurHistory({
             fill
             className="object-cover"
             priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-[#0d0d0d]/20" />
         </div>
 
         {bgImage && (
           <div className="absolute inset-0 pointer-events-none select-none">
-            <Image src={bgImage} alt="" fill className="object-cover" />
+            <Image src={bgImage} alt="" fill className="object-cover" sizes="100vw" />
             <div className="absolute inset-0 bg-[#0d0d0d]/70" />
           </div>
         )}
@@ -117,6 +118,7 @@ export default function OurHistory({
             alt=""
             fill
             className="object-cover opacity-30 mix-blend-multiply"
+            sizes="100vw"
           />
         </div>
 

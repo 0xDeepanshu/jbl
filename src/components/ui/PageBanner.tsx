@@ -30,6 +30,7 @@ export default function PageBanner({
             fill
             className="object-cover"
             priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#0d0d0d]/80 via-[#111111]/60 to-[#080808]/80" />
         </div>

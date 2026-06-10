@@ -42,6 +42,7 @@ export default function ProductCard({
         alt=""
         fill
         className="object-contain pointer-events-none"
+        sizes="(max-width: 768px) 50vw, 25vw"
         priority
       />
       {/* image */}
@@ -54,6 +55,7 @@ export default function ProductCard({
           alt={title}
           fill
           className="object-contain drop-shadow-xl"
+          sizes="(max-width: 768px) 50vw, 25vw"
         />
       </div>
       {/* text */}

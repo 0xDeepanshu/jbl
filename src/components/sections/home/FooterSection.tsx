@@ -119,6 +119,7 @@ export default function FooterSection() {
         alt=""
         fill
         className="object-cover"
+        sizes="100vw"
       />
 
       {/* All content above the bg image */}

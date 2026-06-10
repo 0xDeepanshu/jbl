@@ -24,6 +24,7 @@ export default function TodaysOffer() {
         fill
         priority
         className="object-cover"
+        sizes="100vw"
       />
 
       <Container>
@@ -35,7 +36,7 @@ export default function TodaysOffer() {
             <div className="relative flex items-center justify-center w-full max-w-[420px] aspect-square">
               <div className="absolute inset-6 rounded-3xl bg-[#E84B07]" />
               <Image
-                src="/Todaysoffer/men.png"
+                src="/todaysoffer/men.png"
                 alt="JBL Tune 770NC"
                 width={540}
                 height={540}

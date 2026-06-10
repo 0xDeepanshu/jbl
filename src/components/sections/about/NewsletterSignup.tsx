@@ -20,6 +20,7 @@ export default function NewsletterSignup({
             alt=""
             fill
             className="object-cover"
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-[#ff5a1f]/70" />
         </div>

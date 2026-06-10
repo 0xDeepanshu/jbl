@@ -46,6 +46,7 @@ export default function HistoryTimeline({ items }: HistoryTimelineProps) {
               alt=""
               fill
               className="object-cover"
+              sizes="330px"
             />
           </div>
         ))}

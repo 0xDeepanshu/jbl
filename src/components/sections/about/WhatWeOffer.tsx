@@ -29,7 +29,7 @@ const tabContent: Record<
     heading: "HEADPHONES",
     description:
       "Premium wireless and wired headphones for every lifestyle. Experience studio-quality sound anywhere.",
-    image: "/bg/bg_audio copy.png",
+    image: "/bg/bg_audio.png",
   },
   gaming: {
     heading: "GAMING HEADSETS",
@@ -47,7 +47,7 @@ const tabContent: Record<
     heading: "SPECIALTY AUDIO",
     description:
       "Professional-grade audio solutions for studios, stages, and commercial installations.",
-    image: "/bg/bg_audio copy.png",
+    image: "/bg/bg_audio.png",
   },
   car: {
     heading: "CAR AUDIO",
@@ -74,6 +74,7 @@ export default function WhatWeOffer() {
         alt=""
         fill
         className="object-cover"
+        sizes="100vw"
       />
 
       <Container>
@@ -117,6 +118,7 @@ export default function WhatWeOffer() {
                 alt={current.heading}
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>

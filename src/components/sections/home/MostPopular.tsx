@@ -20,6 +20,8 @@ export default function MostPopular() {
         alt=""
         fill
         className="object-cover"
+        sizes="100vw"
+        priority
       />
 
       <div className="relative z-10">

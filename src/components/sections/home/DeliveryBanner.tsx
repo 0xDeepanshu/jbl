@@ -19,6 +19,7 @@ export default function DeliveryBanner({ className }: DeliveryBannerProps) {
             alt=""
             fill
             className="object-cover rounded-[32px]"
+            sizes="100vw"
           />
 
 

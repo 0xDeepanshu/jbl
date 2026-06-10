@@ -34,6 +34,7 @@ export default function NewArrivals() {
         alt=""
         fill
         className="object-cover"
+        sizes="100vw"
       />
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-8 py-20 min-h-screen">

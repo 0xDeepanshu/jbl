@@ -53,7 +53,7 @@ export default function AudioSection() {
   return (
     <section className="relative overflow-hidden py-20">
 
-      <Image src="/bg/bg_audio.png" alt="" fill className="object-cover" />
+      <Image src="/bg/bg_audio.png" alt="" fill className="object-cover" sizes="100vw" priority />
 
       <div className="relative z-10">
         <Container>

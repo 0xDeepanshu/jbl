@@ -21,6 +21,7 @@ export default function ClientReviews() {
         alt=""
         fill
         className="object-cover"
+        sizes="100vw"
       />
       <Container>
         <div className="flex items-center justify-center gap-40 min-h-[720px]">

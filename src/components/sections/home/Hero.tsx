@@ -56,6 +56,7 @@ export default function Hero() {
                     alt=""
                     fill
                     className="object-cover"
+                    sizes="72px"
                   />
                 </div>
               ))}

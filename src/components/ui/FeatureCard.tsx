@@ -23,6 +23,7 @@ export default function FeatureCard({
             alt={title}
             fill
             className="object-cover"
+            sizes="250px"
           />
         </div>
 

@@ -104,6 +104,7 @@ export default function NoiseCancelling() {
                     alt={product.title}
                     fill
                     className="relative z-10 object-contain p-2"
+                    sizes="(max-width: 768px) 50vw, 300px"
                   />
                 </div>
 
